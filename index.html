@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>52º FONAJE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 100%;
+            background-color: rgb(96, 60, 255);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container img {
+            width: 100% !important;
+        }
+
+        /* SCROLLBARS */
+        /* Works on Firefox */
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8f8f8f #fff;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #fff;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #394faf;
+            border-radius: 20px;
+            border: 2px solid #ffffff;
+        }
+
+        Menu Lateral
+        .mobile-menu{
+            display: none;
+            position: fixed;
+            width: 100%;
+            text-align: end;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            background-color: #157158;
+            position: fixed;
+            top: 0;
+            color: #fff;
+        }
+
+        .navbar a {
+            color: #fff;
+        }
+
+
+        .menu-links {
+            margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            .menu-links {
+                display: none;
+            }
+        }
+
+        .menu-links a {            
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="navbar">
+        <a href="#" onclick="scrollToElement('4')">Praça da Liberdade</a>
+    </div> -->
+    <div class="container">
+        <!-- <div class="mobile-menu" onclick="toggleMenu()">Menu</div>
+        <div class="menu-links">
+            <a href="#" onclick="scrollToElement('4')">Praça da Liberdade</a>
+        </div> -->
+
+        <img src="/img/1.png" alt="imagem-1">
+        <img src="/img/2.png" alt="imagem-2">
+        <img src="/img/3.png" alt="imagem-3">
+        <img id="4" src="/img/4.png" alt="imagem-4">
+        <img src="/img/5.png" alt="imagem-5">
+        <img src="/img/6.png" alt="imagem-6">
+        <img src="/img/7.png" alt="imagem-7">
+        <img src="/img/8.png" alt="imagem-8">
+        <img src="/img/9.png" alt="imagem-9">
+        <img src="/img/10.png" alt="imagem-10">
+        <img src="/img/11.png" alt="imagem-11">
+        <img src="/img/12.png" alt="imagem-12">
+        <img src="/img/13.png" alt="imagem-13">
+        <img src="/img/14.png" alt="imagem-14">
+        <img src="/img/15.png" alt="imagem-15">
+        <img src="/img/16.png" alt="imagem-16">
+        <img src="/img/17.png" alt="imagem-17">
+        <img src="/img/18.png" alt="imagem-18">
+        <img src="/img/19.png" alt="imagem-19">
+        <img src="/img/20.png" alt="imagem-20">
+        <img src="/img/21.png" alt="imagem-21">
+        <img src="/img/22.png" alt="imagem-22">
+        <img src="/img/23.png" alt="imagem-23">
+        <img src="/img/24.png" alt="imagem-24">
+        <img src="/img/25.png" alt="imagem-25">
+        <img src="/img/26.png" alt="imagem-26">
+        <img src="/img/27.png" alt="imagem-27">
+        <img src="/img/28.png" alt="imagem-28">
+        <img src="/img/29.png" alt="imagem-29">
+        <img src="/img/30.png" alt="imagem-30">
+        <img src="/img/31.png" alt="imagem-31">
+        <img src="/img/32.png" alt="imagem-32">
+        <img src="/img/33.png" alt="imagem-33">
+        <img src="/img/34.png" alt="imagem-34">
+    </div>
+
+    <script>
+        // function toggleMenu() {
+        //     var menu = document.querySelector('.menu-links');
+        //     menu.style.display = (menu.style.display === 'block' || menu.style.display === '') ? 'none' : 'block';
+        // }
+
+        // function scrollToElement(elementId) {
+        //     var element = document.getElementById(elementId);
+        //     element.scrollIntoView({
+        //         behavior: 'smooth'
+        //     });
+        // }
+    </script>
+</body>
+
+</html>
