@@ -27,7 +27,7 @@
         <li><a href="#33">Guia de turismo</a></li>
       </ul>
     </nav>
-    <section>
+    <section id="1">
       <img src="/img/1.png" id="1" alt="imagem-1">
       <img src="/img/2.png" id="2" alt="imagem-2">
       <img src="/img/3.png" alt="imagem-3">
@@ -66,23 +66,35 @@
 
     <script>
       window.addEventListener('DOMContentLoaded', () => {
-  const checkbutton = document.querySelector('#check');
-  const navUl = document.querySelector('nav ul');
+      const checkbutton = document.querySelector('#check');
+      const navUl = document.querySelector('nav ul');
 
-  checkbutton.addEventListener('click', () => {
-    // Alternar a exibição do menu e ajustar a propriedade left
-    navUl.style.left = checkbutton.checked ? '0' : '-100%';
-  });
+      checkbutton.addEventListener('click', () => {
+        navUl.style.left = checkbutton.checked ? '0' : '-100%';
+      });
 
-  const links = document.querySelectorAll('nav ul li a');
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      // Fecha o menu ao clicar em um link
-      checkbutton.checked = false;
-      navUl.style.left = '-100%';
+      const links = document.querySelectorAll('nav ul li a');
+      links.forEach(link => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault(); // Impede o comportamento padrão do link
+          const targetId = link.getAttribute('href').substring(1); // Obtém o ID do destino
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            // Calcula o deslocamento considerando a altura do navbar
+            const offset = targetElement.offsetTop - 80;
+            window.scrollTo({
+              top: offset,
+              behavior: 'smooth'
+            });
+
+            // Fecha o menu ao clicar em um link
+            checkbutton.checked = false;
+            navUl.style.left = '-100%';
+          }
+        });
+      });
     });
-  });
-});
 
     </script>
   </body>
