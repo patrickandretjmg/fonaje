@@ -34,7 +34,7 @@ nav {
   top: 0;
 }
 
-div.logo {
+a.logo {
   display: inline-block;
   margin-left: 10px;
   color: white;
@@ -74,16 +74,17 @@ nav ul li a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-a:hover, a.active {
+nav ul li a:hover, nav ul li a.active {
   background: none;
   color: #0082e6;
 }
+
 
 #check:checked ~ ul {
   left: 0;
 }
 
-a.active, a:hover {
+nav ul li a.active, nav ul li a:hover {
   color: #fff;
   background: #1b9bff;
   transition: .5s;
