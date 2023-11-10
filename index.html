@@ -14,7 +14,7 @@
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <div class="logo"></div>
+      <a href="#1" class="logo"></a>
       <ul>
         <li><a href="#1">Home</a></li>
         <li><a href="#2">Pontos Turísticos</a></li>
@@ -93,6 +93,24 @@
             navUl.style.left = '-100%';
           }
         });
+      });
+
+      // Adicione um evento de clique para a logo
+      const logoLink = document.querySelector('nav .logo');
+      logoLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        const homeElement = document.getElementById('1');
+
+        if (homeElement) {
+          const offset = homeElement.offsetTop;
+          window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+          });
+
+          checkbutton.checked = false;
+          navUl.style.left = '-100%';
+        }
       });
     });
 
